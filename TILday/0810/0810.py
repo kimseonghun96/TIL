@@ -199,18 +199,18 @@ def sequentialSearch(a, n, key)
 이진 검색의 경우, 자료에 삽입이나 삭제가 발생했을 때 배열의 상태를 항상 정렬 상태로 유지하는 추가 작업이 필요하다
 
 -이진 검색 알고리즘
-def binarySearch(a, N, key) #a= 검색 대상 N = 초기 크기 key = 찾고자하는 대상
-    start = 0
+def binarySearch(a, N, key) # a= 검색 대상 배열 ,N = 초기 크기 key = 찾고자하는 대상
+    start = 0            # 시작과 끝을 정함
     end = N-1
-    while start <= end:
-        middle = (start + end) // 2
+    while start <= end:    # =를 빼먹으면 start == end가 같을경우도 비교하기 때문에
+        middle = (start + end) // 2         #이진 검색을 하기 위한 중간지점
         if a[middle] == key : #검색 성공
             return true
-        elif a[middle] > key :
-            end - middle - 1
+        elif a[middle] > key :  # 찾고자 하는 것이 크다면
+            end - middle - 1    # 반대 쪽 지워버림
         else:
-            start = middle + 1
-    return false            #검색실패    
+            start = middle + 1  # 끝을 정했기에 넘어서면 start와 end 위치가 역전됨 실패
+    return false            #검색실패     
   
   내일 문제중 미들 포함해서 뭐 하는 것이 있을 것이다.
   
