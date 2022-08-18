@@ -13,18 +13,16 @@ for tc in range(1, T+1):
     stack = [S]
     visited = []
 
-    while stack:  # 스택이 빌때까지 돌아라!
+    while stack:  # 스택이 빌때까지
         current = stack.pop ()  # 우선 스택에서 현재 위치 하나 뽑고
-        visited.append(current)  # 방문했다고 체크해줌
+        visited.append(current)  # 방문 체크
 
         for destination in range(V + 1):  # current 입장에서 어디로 갈 수 있는지 모조리 체크
             if adj_matrix[current][destination]:
                 stack.append(destination)
         if G in visited:
-            print(f'# {tc} 1')
+            print(f'#{tc} 1')
             break
 
     if G not in visited:
         print(f'#{tc} 0')
-
-
