@@ -8,8 +8,6 @@
 
     4. 마지막에 삽입한 자료를 가장 마지막에 꺼낸다. 선입선출이라고 부른다.
 
-
-
     정답: 1
 
     오답 풀이:  2. 스택에 저장된 자료는 선형 구조를 갖는다. (자료간의 관계가 1대 1)
@@ -30,15 +28,13 @@
 
     4. 저장소 자체를 스택이라 부르기도 한다.
 
-
-
     정답: 3 - isEmpty다. (공백이면 True, 비어있지 않으면 False)
 
                     peek는 스택의 top에 있는 item(원소)을 반환하는 연산이다.
 
 ---
 
-##### 3.
+##### 3.  스택의 구현 문제
 
     1.
 
@@ -50,7 +46,7 @@
 
 ---
 
-##### 4.
+##### 4. function call 문제
 
     1.
 
@@ -62,7 +58,31 @@
 
 ---
 
-##### 5.
+##### 5. 피보나치 수를 구하는 재귀함수 중 a와 b에 들어갈 것으로 올바른 것은? (23쪽)
+
+```python
+def fibo(n) :
+    if n < 2 :
+        return n
+    else :
+        return fibo(a) + fibo(b)
+```
+
+    1. a: n     b: n -1 
+
+    2. a: n     b: n+1
+
+    3. a: n-1    b: n 
+
+    4. a: n-1    b: n-2
+
+    
+
+    정답 : 4. n-1, n-2 (설명 추가 필요)
+
+---
+
+##### 6. 메모제이션(memoization)의 문제
 
     1.
 
@@ -74,39 +94,36 @@
 
 ---
 
-##### 6.
+##### 7. 피보나치 수 DP 적용 알고리즘 중 빈칸 a에 들어갈 것 메서드를 적으시오.
 
-    1.
+```python
+def fibo2(n):
+    f = [0, 1]
 
-    2.
 
-    3.
+    for i in range(2, n+1)
+        f.(a)(f[i-1] + fi[i-2)
 
-    4.
+    return f[n]
+```
 
----
+정답:
 
-##### 7.
-
-    1.
-
-    2.
-
-    3.
-
-    4.
+    정답: append
 
 ---
 
-##### 8.
+##### 8. 깊이 우선 탐색과 너비 우선 탐색을 올바르게 표현한 것을 고르세요
 
-    1.
+    1. 깊이 우선 탐색(Deepness First Search, DFS), 너비 우선 탐색(Width First Search, WFS)
 
-    2.
+    2. 깊이 우선 탐색(Depth First Search, DFS), 너비 우선 탐색(Breadth First Search, BFS)
 
-    3.
+    3. 깊이 우선 탐색(Deepness First Search, DFS), 너비 우선 탐색(Width First Search, WFS)
 
-    4.
+    4. 깊이 우선 탐색(Depth First Search, DFS), 너비 우선 탐색(Breadth First Search, BFS)
+
+    정답: 2. 깊이 우선 탐색(Depth First Search, DFS), 너비 우선 탐색(Breadth First Search, BFS)
 
 ---
 
@@ -133,5 +150,3 @@
     4.
 
 ---
-
-
