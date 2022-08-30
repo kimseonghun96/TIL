@@ -1,0 +1,24 @@
+
+{% extends 'base.html' %}
+
+{% block content%}
+
+    
+        <h2>index 대리에게 도달 하셨군요</h2>
+
+        {% comment %} <h2>{{ name }}님 환영합니다!</h2>    
+        <hr>
+        <h2>전체음식 : {{ foods }}</h2>
+        <h2>첫번째 : {{ foods.0 }}</h2>
+        <h2>사는 도시 : {{ address.city }}</h2>
+        <hr>
+        <h2>랜덤 넘버 : {{ pick }}</h2> {% endcomment %}
+        
+    {% for food in foods%}
+        <p>{{ food }}</p>
+        <p>{{ food|length }}</p>
+    {%endfor%}
+
+
+{% endblock content %}
+
