@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>NEW</h1>
+<hr>
+<label for="title">TITLE</label>
+<input type="text" name="title" id = "title">
+<br>
+<label for="audience">AUDIENCE</label>
+<input type="number" name = "audience" id = "audience">
+<br>
+<label for="release_date">RELEASE_DATE</label>
+<input type="date" name = "release_date" id = "release_date">
+<br>
+<label for="genre">GENRE</label>
+<select name="genre" id="genre">
+	<option value="genre">코미디</option>
+	<option value="genre">호러</option>
+	<option value="genre">다큐</option>
+</select>
+<br>
+<label for="score">SCORE</label>
+<input type="number" name = "score" id = "score">
+<br>
+<label for="poster_utl">POSTER_UTL</label>
+<input type="text" name = "poster_utl" id = "poster_utl">	
+<br>
+<label for="description">DESCRIPTION</label>
+<textarea name="description" id="description" cols="30" rows="10"></textarea>
+<br>
+<input type="submit" value =Submit>
+<hr>
+<a href="{% url 'movies:index' %}">BACK</a>
+
+
+{% endblock content  %}
