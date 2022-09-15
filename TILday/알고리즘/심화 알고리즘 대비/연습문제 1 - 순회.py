@@ -2,6 +2,7 @@
 13
 1 2 1 3 2 4 3 5 3 6 4 7 5 8 5 9 6 10 6 11 7 12 11 13
 '''
+'''
 def find_root(V):
     for i in range(1, V + 1):
         if par[i] == 0:  # 부모가 없으면 root
@@ -50,3 +51,48 @@ root = find_root(V)
 preorder(root)
 # inorder(root)
 # postorder(root)
+'''
+
+
+
+
+'''
+13
+1 2 1 3 2 4 3 5 3 6 4 7 5 8 5 9 6 10 6 11 7 12 11 13
+'''
+#전위 순회 => print / 왼/ 오
+
+V = int(input())
+edges = list(map(int, input().split()))
+left = [0]*(V+1)
+right = [0]*(V+1)
+find_root = [0]*(V+1)
+root = None  #일단 루트 모름
+for i in range(V-1): # 간선의 개수만큼 돌면서
+    parent, child = edges[2*i], edges[2*i+1]
+    if not left[parent]: #left[parent]==0:
+        left[parent] = child
+    else:
+        right[parent] = child
+
+    find_root[child] = parent
+
+# print('왼: ', left)
+# print('오: ', right)
+
+def preorder(n): # n은 노드 번호
+    if n > 0:
+        print(n, end = ' ')
+        preorder(left[n])
+        # print(n, end=' ')
+        preorder(right[n])
+        # print(n, end=' ')
+
+for j in range(1, V+1):
+    if find_root[j] == 0:
+        root = j
+        break
+
+preorder(root)
+print()
+print(root)
