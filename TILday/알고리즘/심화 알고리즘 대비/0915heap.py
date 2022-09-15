@@ -20,7 +20,7 @@ def heap_push(item):
 
 
 def heap_pop():
-    if len(heap) == 1: # 없을때ㅔ 뽑지 않는 장치
+    if len(heap) == 1: # 없을때 뽑지 않는 장치
         return
     result  = heap[1]
     item = heap.pop()
