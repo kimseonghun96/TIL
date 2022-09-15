@@ -51,5 +51,5 @@ root = find_root(V)
 print(root)
 
 # preorder(root)
-# inorder(root)
+inorder(root)
 # postorder(root)
