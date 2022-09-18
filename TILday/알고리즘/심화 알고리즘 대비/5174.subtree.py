@@ -10,29 +10,67 @@
 
 
 
-def postorder(n):
-    global answer
-    # 순회할 때마다 + 1
-    postorder(left[n])
-    postorder(right[n])
-    answer += 1
+# def postorder(n):
+#     global answer
+#     # 순회할 때마다 + 1
+#     answer += 1
+#     postorder(left[n])
+#     postorder(right[n])
 
 
 T = int(input())
-for tc in range(T, T+1):
-    E, N = input().split()
-    E = int(E)
-    answer = ''
-    child_num = list(map(int, input().split()))
-    subtree = [0]*(E+2)
-    left = [0]*(E+2)
-    right = [0]*(E+2)
-    for i in range(E+2):
-        parent, child = subtree[2*i], subtree[2*i+1]
-        if left[parent] == 0:
+for tc in range(1, T+1):
+    E, N = map(int, input().split())
+    edges = list(map(int, input().split()))
+    V = E + 1
+    left = [0]*(V+1)
+    right = [0]*(V+1)
+    for i in range(E):
+        parent, child = edges[2*i], edges[2*i+1]
+        if left[parent]:
+            right[parent] = child
+        else:
+            left[parent] = child
+
+    stack = [N]
+    visit = []
+    while stack:
+        current = stack.pop()
+        visit.append(current)
+        if left[current]:
+            stack.append(left[current])
+        if right[current]:
+            stack.append(right[current])
+
+    # print(visit)
+    print(f'#{tc} {len(visit)}')
+
+
+
+def cnt_node(n):
+    global cnt
+    if n:
+        cnt += 1
+        cnt_node(left[n])
+        cnt_node(right[n])
+
+T = int(input())
+for tc in range(1, T+1):
+    E, N = map(int, input().split())
+    edges = list(map(int, input().split()))
+    V = E+1
+    left = [0]*(V+1)
+    right = [0]*(V+1)
+    for i in range(E):
+        parent = edges[2*i]
+        child = edges[2*i+1]
+
+        if not left[parent]:
             left[parent] = child
         else:
             right[parent] = child
 
-postorder(2)
-print(answer)
+    cnt = 0
+    cnt_node(N)
+
+    print(f'#{tc} {cnt}')
