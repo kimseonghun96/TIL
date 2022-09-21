@@ -1,18 +1,17 @@
-
 di = [-1, 1, 0, 0]
 dj = [0, 0, -1, 1]
 
-T = int(input())
+T = 10
 for tc in range(1, T+1):
-    N = int(input())
-    arr = [list(input()) for _ in range(N)]
+    testcase = int(input())
+    arr = [list(input()) for _ in range(16)]
     # print(arr)
 
     result = 0          #결과의 초기 값
     start = (0, 0)
     # 시작점을 찾고 싶어요
-    for i in range(N):
-        for j in range(N):
+    for i in range(16):
+        for j in range(16):
             if arr[i][j] == '2':
                 start = (i, j)
 
@@ -34,7 +33,7 @@ for tc in range(1, T+1):
         for direction in range(4):   # direction = [ 0, 1, 2, 3 ]
             px = x + di[direction]
             py = y + dj[direction]
-            if 0 <= px < N and 0 <= py < N and (px, py) not in visited:
+            if 0 <= px < 16 and 0 <= py < 16 and (px, py) not in visited:
                 if arr[px][py] == '3':
                     result = 1
                     flag = False
@@ -43,8 +42,4 @@ for tc in range(1, T+1):
                     stack.append((px, py))
                     visited.add((px, py))
 
-
-    print(f'#{tc} {result}')
-
-
-
+    print(f'#{testcase} {result}')
