@@ -1,45 +1,78 @@
-def dfs(dr, dc):
-    global answer
-    w, s = 0, 0  # 늑대와 양 수
-    stack = [(dr, dc)]
-    visit = set()
+import sys
+sys.stdin = open('input.txt')
 
-    while stack:
+dr= [-1, 0, 0]
+dc= [0, -1, 1]
+
+for tc in range(10):
+    testcase = int(input())
+    ladder = [list(map(int, input().split())) for _ in range(100)]
+    #첫 시작점은 도착(마지막 줄) 지점2
+    # r = int(ladder[99].index(2))
+    # c = 99
+    start = (0, 0)
+    for r in range(100):
+        for c in range(100):
+            if ladder[r][c] == 2:
+                start = (r, c)
+
+    stack = [start, ]
+    visit = set()
+    end = []    # 마지막 좌표 찍을 꺼임
+    while stack: # 스택 빌 때까지 돈다.
         current = stack.pop()
         r = current[0]
         c = current[1]
+        # print(c)
+        for i in range(3):
+            if ladder[r][c] == 1:
+                nr = r + dr[i]
+                nc = c + dc[i]
+                if 0 <= nr < 100 and 0 <= nc < 100 and (nr, nc) not in visit:
+                    if ladder[nr][nc] == 1:
+                        stack.append(ladder[nr][nc])
+                        visit.add(ladder[nr][nc])
+                        ladder[nr][nc] = 0
 
-        for i in range(4):
-            nr = r + dr[i]
-            nc = c + dc[i]
-            if 0 <= nr < R and 0 <= nc < C and (nr, nc) not in visit:
-                # 벽 안에서
-                if arr[nr][nc] != '#':
-                    stack.append((arr[nr][nc]))
-                    visit.add((arr[nr][nc]))
-                    if arr[nr][nc] == 'o':
-                        s += 1
-                        arr[nr][nc] = '.'
-                    if arr[nr][nc] == 'V':
-                        w += 1
-                        arr[nr][nc] = '.'
-# [5] 영역 안에서 많은 애만 살아남는다. 적은 애는 죽었음
-    if w >= s:
-        answer[1] += w
-    else:
-        answer[0] += s
-    return
+        if c == 0 and ladder[r][c] == 1:
 
-
-R, C = map(int, input().split())
-arr = [list(input()) for _ in range(R)]
-answer = [0, 0] # 양, 늑대
-# 전체를 탐색하면서 양이나 늑대를 만나면 DFS로 들어간다.
-for i in range(R):
-    for j in range(C):
-        if arr[i][j] == 'o':
-            dfs(i, j)
-        elif arr[i][j] == 'v':
-            dfs(i, j,)
-
-print(*answer)
+# dx = [-1, 0, 0]
+# dy = [0, 1, -1]
+#
+# t = 10
+# for tc in range(t):
+#     n = int(input())
+#     arr = [[0] + list(map(int, input().split())) + [0] for _ in range(100)]
+#     # print(n, arr)
+#     x, y = 0, 0
+#     d = 0
+#     for i in range(100):
+#         for j in range(102):
+#             if arr[i][j] == 2:
+#                 x = i
+#                 y = j
+#
+#         while True:
+#             if x == 0:
+#                 break
+#
+#             if arr[x][y - 1] == 1:  # 왼쪽으로 가기
+#                 d = 2
+#                 while True:
+#                     x += dx[d]
+#                     y += dy[d]
+#                     if arr[x][y - 1] == 0:
+#                         break
+#             elif arr[x][y + 1] == 1:  # 오른쪽으로 가기
+#                 d = 1
+#                 while True:
+#                     x += dx[d]
+#                     y += dy[d]
+#                     if arr[x][y + 1] == 0:
+#                         break
+#
+#             d = 0
+#             x += dx[0]
+#             y += dy[0]
+#
+#     print(f'#{tc + 1} {y - 1}')

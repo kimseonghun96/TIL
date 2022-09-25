@@ -32,4 +32,43 @@ for tc in range(10):
     # y가 0이라면 시작지점에 도달한 것이므로 x좌표를 출력한다.
     print(f'#{N} {x}')
 
+dx = [-1, 0, 0]
+dy = [0, 1, -1]
 
+t = 10
+for tc in range(t):
+    n = int(input())
+    arr = [[0] + list(map(int, input().split())) + [0] for _ in range(100)]
+    # print(n, arr)
+    x, y = 0, 0
+    d = 0
+    for i in range(100):
+        for j in range(102):
+            if arr[i][j] == 2:
+                x = i
+                y = j
+
+        while True:
+            if x == 0:
+                break
+
+            if arr[x][y - 1] == 1:  # 왼쪽으로 가기
+                d = 2
+                while True:
+                    x += dx[d]
+                    y += dy[d]
+                    if arr[x][y - 1] == 0:
+                        break
+            elif arr[x][y + 1] == 1:  # 오른쪽으로 가기
+                d = 1
+                while True:
+                    x += dx[d]
+                    y += dy[d]
+                    if arr[x][y + 1] == 0:
+                        break
+
+            d = 0
+            x += dx[0]
+            y += dy[0]
+
+    print(f'#{tc + 1} {y - 1}')
