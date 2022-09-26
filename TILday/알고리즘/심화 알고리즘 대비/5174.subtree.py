@@ -37,6 +37,7 @@ for tc in range(1, T+1):
     while stack:
         current = stack.pop()
         visit.append(current)
+
         if left[current]:
             stack.append(left[current])
         if right[current]:

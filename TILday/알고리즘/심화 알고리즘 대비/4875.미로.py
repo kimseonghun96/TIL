@@ -16,14 +16,6 @@ for tc in range(1, T+1):
             if arr[i][j] == '2':
                 start = (i, j)
 
-
-            # 시작점에서 시작
-
-            # '밟은 곳에서 사방탐색하면서 0을 찾아
-            # 스택에 담음
-            # 움직일 건데 스택에서 하나를 빼서 그 좌표로 이동
-            # 현재위치를 기록함'
-            # 3을 찾았을 때 result =1
     flag = True
     stack = [start, ]
     visited = set()
