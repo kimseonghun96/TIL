@@ -10,15 +10,15 @@ dc = [0, 1, 0, -1]
 r, c = 2, 2    # 기준점
 arr[r][c] = '*'
 
-nr, nc  = r, c
+nr, nc = r, c
 for _ in range(1, N):
     nr, nc = nr + dr[1], nc + dc[1]
-    if not(0 <= nr < N and  0 <= nc < N):
+    if not(0 <= nr < N and 0 <= nc < N):
         break
     arr[nr][nc] = 1
 
-while  0 <= nr + dr[1] < N and 0 <= nc + dc[1] < N:
-    nr, nc = nr +dr[1], nc + dr[1]
+while 0 <= nr + dr[1] < N and 0 <= nc + dc[1] < N:
+    nr, nc = nr + dr[1], nc + dc[1]
     arr[nr][nc] = 1
 
 
