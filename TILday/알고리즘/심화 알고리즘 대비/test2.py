@@ -1,34 +1,38 @@
-dr = [-1, 1, 0, 0]
-dc = [0, 0, -1, 1]
+dx = [-1, 1, 0, 0]
+dy = [0, 0, -1, 1]
 
+T = 10
+for tc in range(1, T+1):
+    testcase = int(input())
+    arr = [list(input()) for _ in range(100)]
 
+    ans = 0
+    start = (0, 0)
+    for x in range(100):
+        for y in range(100):
+            if arr[x][y] == '2':
+                start = (x, y)
 
-def dfs(r, c):
-    global cnt
-    if 0 <= r < N and 0 <= c < N and arr[r][c] == '1' and not visit[r][c]:
-        cnt += 1
-        arr[r][c] = 0
-        for k in range(4):
-            nr = r + dr[k]
-            nc = c + dc[k]
-            dfs(nr, nc)
-        return 1
-    return 0
+    flag = True
+    stack = [start, ]
+    visited = set()
+    while stack and flag:
+        current = stack.pop()
+        nx = current[0]
+        ny = current[1]
+        # print(stack)
+        for i in range(4):
+            px = nx + dx[i]
+            py = ny + dy[i]
+            if 0 <= px < 100 and 0 <= py < 100 and (px, py) not in visited:
+                if arr[px][py] == '3':
+                    result = 1
+                    flag = False
+                    break
 
-N = int(input())
-arr = [list(input()) for _ in range(N)]
-visit = [[0] * N for _ in range(N)]
-cnt = 0
-ans = []
+                elif arr[px][py] == '0':
+                    stack.append((px, py))
+                    visited.add((px, py))
 
-for i in range(N):
-    for j in range(N):
-        if dfs(i, j) == True:
-            ans.append(cnt)
-            cnt = 0
-
-ans.sort()
-print(len(ans))
-for i in range(len(ans)):
-    print(ans[i])
+    print(f'#{testcase} {ans}')
 

@@ -18,7 +18,7 @@ for tc in range(1, T+1):
     visited = set()
     while stack and flag:
         current = stack.pop()
-        nx = current[0]
+        nx 0= current[0]
         ny = current[1]
         # print(stack)
         for i in range(4):
