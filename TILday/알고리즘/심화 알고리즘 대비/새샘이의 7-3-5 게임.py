@@ -19,5 +19,5 @@ for tc in range(1, T+1):
     ans = list(ans)
     ans.sort()
     ans_list = ans[::-1]
-    print(ans_list)
+    # print(ans_list)
     print(f'#{tc} {ans_list[4]}')
