@@ -1,5 +1,5 @@
 '''
-1
+3
 5
 2 3 2 2 1
 3 1 1 1 3
@@ -33,18 +33,21 @@ for tc in range(1, T+1):
             temp = []
             for i in range(0, r):                 # temp1
                 for j in range(0, c):
-                    temp.append(arr[i][j])
+                    temp1 += arr[i][j]
 
             for i in range(r, N):                 # temp2
                 for j in range(0, c):
-                    temp.append(arr[i][j])
+                    temp2 += arr[i][j]
 
             for i in range(0, N):                 # temp3
                 for j in range(c, N):
-                    temp.append(arr[i][j])
-            print(temp)
-            if ans > max(temp) - min (temp):
-                ans = max(temp) - min (temp)
+                    temp3 += arr[i][j]
+            temp.append(temp1)
+            temp.append(temp2)
+            temp.append(temp3)
+            # print(temp)
+            if ans > max(temp) - min(temp):
+                ans = max(temp) - min(temp)
 
     print(f'#{tc} {ans}')
 
