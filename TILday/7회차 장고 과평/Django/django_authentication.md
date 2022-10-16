@@ -1,13 +1,14 @@
 # Django Authentication
 
 ## 1. Django Authentication System
+
 - 인증(Authentication)
   - 신원 확인
 - 허가(Authorization)
   - 권한 부여
 
-
 ### Custom User Model
+
 - Django에서는 built-in User model을 제공
 - 하지만 프로젝트에 따라 custom User model이 필요한 경우가 많음
   - ex) 회원가입 시 username 대신 email을 식별 값으로 사용
@@ -49,6 +50,7 @@ admin.site.register(User, UserAdmin)
 ## 2. HTTP Cookies
 
 ### HTTP
+
 - Hyper Text Transfer Protocol
 - 웹(www)에서 이루어지는 모든 데이터 교환의 기초
 - HTML 문서와 같은 리소스들을 가져올 수 있도록 해주는 프로토콜
@@ -58,6 +60,7 @@ admin.site.register(User, UserAdmin)
   - 따라서 로그인과 같은 상태를 유지하기 위해 **쿠키**와 **세션**이 존재
 
 ### Cookie
+
 - 서버가 사용자의 웹 브라우저에 전송하는 작은 데이터 조각
 - 브라우저는 쿠키를 로컬에 KEY-VALUE의 데이터 형식으로 저장해두었다가, 동일한 서버에 재요청시 저장된 쿠키를 함께 전송
 - 쿠키 사용 목적
@@ -69,6 +72,7 @@ admin.site.register(User, UserAdmin)
   - Persistent cookie: Expires 속성에 지정된 날짜 혹은 Max-Age 속성에 지정된 기간이 지나면 삭제
 
 ### Session
+
 - 사이트와 특정 브라우저 사이의 상태를 유지시키는 것
 - 클라이언트가 서버에 접속하면 특정 session id를 발급받고, session id를 쿠키에 저장
 - 따라서 session id는 세션을 구별하기 위해 필요하며, 쿠키에는 session id만 저장
@@ -76,6 +80,7 @@ admin.site.register(User, UserAdmin)
   - session 정보는 Django DB의 django_session 테이블에 저장
 
 ## 3. Authentication in Web requests
+
 - Django는 사용자를 나타내는 모든 요청에 request.user를 제공 (로그인하지 않은 경우 AnonymousUser 클래스의 인스턴스)
 - Django는 built-in forms를 제공하므로, forms에 따로 지정하지 않고 호출을 통해 사용 가능
   - 하지만 일부 form은 기존 user 모델을 참조하기 때문에, custom user 모델을 사용할 경우 다시 작성해야 함
@@ -86,13 +91,16 @@ admin.site.register(User, UserAdmin)
 - 따라서 form이 필요한 view 함수의 경우, 이전에 사용했던 방식으로 템플릿에서 form 출력 옵션을 이용해 사용 가능
 
 ### Login
+
 - 로그인은 Session을 Create하는 과정
 - login()함수를 사용
-```python
-# accounts/views.py
-from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import login as auth_login 
-# import한 login은 함수로 사용할 login과 같은 이름을 사용하기 때문에, auth_login으로 변경
+  
+  ```python
+  # accounts/views.py
+  from django.contrib.auth.forms import AuthenticationForm
+  from django.contrib.auth import login as auth_login 
+  # import한 login은 함수로 사용할 login과 같은 이름을 사용하기 때문에, auth_login으로 변경
+  ```
 
 def login(request):
     if request.method == 'POST':
@@ -107,8 +115,8 @@ def login(request):
       'form': form
     }
     return render(request, 'accounts/login.html', context)
-```
 
+```
 - 템플릿에서 인증 관련 데이터를 출력 가능
   - 현재 로그인한 사용자를 나타내는 User 클래스의 인스턴스가 템플릿 변수 user에 저장됨
   - context 없이도 user 변수를 사용가능한 것은, setting.py의 context processors 설정 값 때문
@@ -121,24 +129,27 @@ def login(request):
     <h1>Hello, {{ user }}</h1>
     <% block content %>
     <% endblock content %>
-  ```
+```
 
 ### Logout
+
 - 로그아웃은 Session을 Delete하는 과정
 - logout()함수를 사용
   - 반환값이 없으며, 로그인하지 않은 경우 오류를 발생시키지 않음
   - 현재 요청에 대한 session data를 DB에서 삭제
   - 클라이언트의 쿠키에서도 session id를 삭제
-```python
-# accounts/views.py
-from django.contrib.auth import logout as auth_logout
-# logout 함수도 login과 마찬가지로 이름 변경
+    
+    ```python
+    # accounts/views.py
+    from django.contrib.auth import logout as auth_logout
+    # logout 함수도 login과 마찬가지로 이름 변경
+    ```
 
 def logout(request):
     auth_logout(request)
     return redirect('articles:index')
-```
 
+```
 ### 회원가입
 - 회원가입은 DB에 유저를 Create하는 과정
 - UserCreationForm을 사용
@@ -190,9 +201,12 @@ def signup(request):
 ```
 
 ### 회원 탈퇴
+
 - 회원 탈퇴는 DB에서 유저를 Delete하는 과정
-```python
-# accounts/views.py
+  
+  ```python
+  # accounts/views.py
+  ```
 
 def delete(request):
     request.user.delete()
@@ -200,8 +214,8 @@ def delete(request):
     # 로그아웃 먼저 하고 회원 탈퇴 시키려고 하면, 요청 객체 정보가 없어지기 때문에 순서 중요
     auth_logout(request) 
     return redirect('articles:index')
-```
 
+```
 ### 회원정보 수정
 - 회원정보 수정은 DB에서 유저 정보를 Update하는 과정
 - UserChangeForm을 사용
@@ -239,10 +253,13 @@ def update(request):
 ```
 
 ### 비밀번호 변경
+
 - PasswordChangeForm 사용
-```python
-from django.contrib.auth.forms import PasswordChangeForm
-from django.contrib.auth import update_session_auth_hash
+  
+  ```python
+  from django.contrib.auth.forms import PasswordChangeForm
+  from django.contrib.auth import update_session_auth_hash
+  ```
 
 def change_password(request):
     if request.method == "POST":
@@ -262,8 +279,8 @@ def change_password(request):
         'form' : form
     }
     return render(request, 'accounts/change_password.html', context)
-```
 
+```
 ## 4. Limiting access
 - 로그인 사용자와 로그인하지 않은 사용자 접근 관리 가능
   - templates: `is_authenticated` 속성
@@ -414,6 +431,7 @@ def change_password(requese):
 ```
 
 ### 참고) 에러 응답하기
+
 ```python
 # articles/views.py
 from django.http import httpResponse

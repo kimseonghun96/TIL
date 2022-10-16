@@ -585,6 +585,7 @@ def delete(request, pk):
 ### Target model & Source model
 
 - target model: 모델 내부에 관계 필드를 가지지 않은 모델
+
 - source model: 모델 내부에 관계 필드를 가진 모델
   
   ```python
