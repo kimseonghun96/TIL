@@ -3,6 +3,7 @@
 ## 1. CRUD 기본
 
 ### CREATE
+
 ```python
 # User 테이블에 데이터 생성
 User.objects.create(
@@ -16,6 +17,7 @@ User.objects.create(
 ```
 
 ### READ
+
 ```python
 # User 테이블의 모든 레코드 조회
 User.objects.all()
@@ -32,6 +34,7 @@ print(User.objects.all().query)
 ```
 
 ### UPDATE
+
 ```python
 # 10번 user 레코드의 last_name을 김으로 수정
 user = User.objects.get(pk=10)
@@ -42,6 +45,7 @@ user.last_name # 김
 ```
 
 ### DELETE
+
 ```python
 # 10번 user 레코드 삭제
 user = User.objects.get(pk=10)
@@ -53,11 +57,13 @@ User.objects.get(pk=10)
 ## 2. Sorting data
 
 - `order_by()`
+  
   - QuerySet의 정렬을 재정의
   - 기본적으로 오름차순 정렬 / 필드명에 `-`을 작성하면 내림차순 정렬
   - 인자로 `?`를 입력하명 랜덤으로 정렬
 
 - `values()`
+  
   - 딕셔너리 요소들을 가진 QuerySet을 반환
   - 필드를 지정하면 지정한 필드에 대한 key와 value만을 출력
   - 필드를 지정하지 않으면 모든 필드에 대한 key와 value를 출력
@@ -86,24 +92,28 @@ User.objects.order_by('age').order_by('-balance')
 ```
 
 ## 3. Filtering data
+
 - `distinct()`
+  
   - 중복을 제거한 뒤 QuerySet 반환
 
 - `filter()`
+  
   - 주어진 매개변수와 일치하는 객체를 포함하는 QuerySet 반환
   - `.filter`를 연속해서 사용할 수 있다.
 
 - `exclude()`
+  
   - 주어진 매개변수와 일치하지 않는 객체를 포함하는 QuerySet 반환
 
 - **Field lookups**
+  
   - 상세한 조건을 지정하는 방법
   - QuerySet 메소드 filter(), exclude() 및 get()에 대한 키워드 인자로 사용
     - 참고) 위 메소드는 모두 파이썬의 함수이므로, `=`를 제외한 `>=`등을 사용할 수 없음
     - 따라서 Field lookups를 사용해, 다양한 조건 지정 가능
   - 필드명 뒤에 `__` 이후 작성
   - ex) `gte`, `gt`, `contains`, `startswith`, `endswith`, `in`
-
 
 ```python
 # 중복없이 모든 지역 조회
@@ -165,12 +175,14 @@ User.objects.get(Q(last_name='김'), Q(age=20) | Q(age=30))
 ## 4. Grouping data
 
 - `aggregate()`
+  
   - 전체 QuerySet에 대한 값을 계산
   - 특정 필드 전체의 합, 평균, 개수 등을 계산할 때 사용
   - 딕셔너리를 반환
   - aggregation functions: `Avg`, `Count`, `Max`, `Min`, `Sum` 등
 
 - `annotate()`
+  
   - 쿼리의 각 항목에 대한 요약 값을 계산
   - SQL의 `GROUP BY`에 해당
 
@@ -200,10 +212,13 @@ User.objects.values('country').annotate(Count('country'), Avg('balance'))
 ```
 
 ## 5. Improve Query
+
 Query를 줄이는 최적화 과정을 연습해보기
 
 ### annotate
+
 - 예시: 각 게시글의 댓글 수를 함께 출력
+  
   ```python
   def index(request):
       # articles = Article.objects.order_by('-pk')
@@ -213,9 +228,10 @@ Query를 줄이는 최적화 과정을 연습해보기
       }
       return render(request, 'articles/index.html', context)
   ```
+  
   ```django
   {% extends 'base.html' %}
-
+  
   {% block content %}
     <h1>Articles</h1>
     {% for article in articles %}
@@ -228,9 +244,13 @@ Query를 줄이는 최적화 과정을 연습해보기
   ```
 
 ### select_related
+
 - 1:1 또는 N:1 참조 관계에서 사용
+
 - SQL에서 INNER JOIN 절을 활용
+
 - 예시: 각 게시글의 작성자를 함께 출력
+  
   ```python
   def index(request):
       # article을 가져올 때 user id 값도 함께 가져와서, 중복으로 query를 보내지 않음
@@ -241,9 +261,10 @@ Query를 줄이는 최적화 과정을 연습해보기
       }
       return render(request, 'articles/index.html', context)
   ```
+  
   ```django
   {% extends 'base.html' %}
-
+  
   {% block content %}
     <h1>Articles</h1>
     {% for article in articles %}
@@ -255,9 +276,11 @@ Query를 줄이는 최적화 과정을 연습해보기
   ```
 
 ### prefecth_related
+
 - 역참조 관계에서 사용
 
 - 예시: 각 게시글의 모든 댓글을 함께 출력
+  
   ```python
   def index(request):
       # article을 가져올 때 역참조 관계인 comment도 한 번에 가져오기
@@ -268,9 +291,10 @@ Query를 줄이는 최적화 과정을 연습해보기
       }
       return render(request, 'articles/index.html', context)
   ```
+  
   ```django
   {% extends 'base.html' %}
-
+  
   {% block content %}
     <h1>Articles</h1>
     {% for article in articles %}
@@ -285,6 +309,7 @@ Query를 줄이는 최적화 과정을 연습해보기
   ```
 
 - 예시: 각 게시글의 모든 댓글과, 모든 댓글의 유저를 함께 출력
+  
   ```python
   def index(request):
       # 댓글과 함께 
@@ -293,15 +318,16 @@ Query를 줄이는 최적화 과정을 연습해보기
       articles = Article.objects.prefetch_related(
           Prefetch('comment_set', queryset=Comment.objects.select_related('user'))
       ).order_by('-pk')
-
+  
       context = {
           'articles': articles,
       }
       return render(request, 'articles/index.html', context)
   ```
+  
   ```django
   {% extends 'base.html' %}
-
+  
   {% block content %}
     <h1>Articles</h1>
     {% for article in articles %}

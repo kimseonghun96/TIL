@@ -1,0 +1,6 @@
+3. Django template path
+Django 프로젝트는 render할 template 파일들을 찾을 때, 기본적으로 settings.py에
+등록된 각 앱 폴더 안의 __(a)__ 폴더 내부를 탐색한다. 
+__(a)__에 들어갈 폴더 이름을 작성하시오.
+
+a: INSTALLED_APPS

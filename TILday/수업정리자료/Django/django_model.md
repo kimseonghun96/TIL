@@ -68,25 +68,31 @@
 ### Migrations
 
 - migration 3단계
+  
   1) models.py 추가 및 변경
   2) makemigrations
   3) migrate
+
 - makemigrations: models에 작성한 스키마를 바탕으로, 설계도를 작성하는 것
+  
   - migrations 폴더에 파일 생성
     
     ```bash
     $ python manage.py makemigrations
     ```
+
 - migrate: 작성한 설계도를 sqlite DB파일에 반영하는 과정
   
   ```bash
   $ python manage.py migrate
   ```
+
 - showmigrations: migrations 파일들이 migrate 됐는지 확인 (X 표시가 완료되었다는 의미)
   
   ```bash
   $ python manage.py showmigrations
   ```
+
 - sqlmigrate: 해당 migrations 파일이 SQL 문으로 어떻게 해석될지 미리 확인
   
   ```bash
@@ -136,6 +142,7 @@
 - 기능 확인을 위해 ipython, django-extensions 라이브러리 설치
   
   - `settings.py` 내 `INSTALLED-APPS` 안에 `'django_extensions'` 추가
+  
   - Shell을 이용해 장고 프로젝트 환경에 영향을 주지 않는 선에서 다양한 명령어 실행 가능
     
     ```bash

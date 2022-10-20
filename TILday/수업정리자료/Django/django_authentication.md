@@ -93,6 +93,7 @@ admin.site.register(User, UserAdmin)
 ### Login
 
 - 로그인은 Session을 Create하는 과정
+
 - login()함수를 사용
   
   ```python
@@ -134,9 +135,13 @@ def login(request):
 ### Logout
 
 - 로그아웃은 Session을 Delete하는 과정
+
 - logout()함수를 사용
+  
   - 반환값이 없으며, 로그인하지 않은 경우 오류를 발생시키지 않음
+  
   - 현재 요청에 대한 session data를 DB에서 삭제
+  
   - 클라이언트의 쿠키에서도 session id를 삭제
     
     ```python
