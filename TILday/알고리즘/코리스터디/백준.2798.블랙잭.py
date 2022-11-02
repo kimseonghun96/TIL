@@ -15,3 +15,4 @@ for i in range(N):
                     ans.append(arr[i] + arr[j] + arr[k])
 
 print(max(ans))
+#1212
