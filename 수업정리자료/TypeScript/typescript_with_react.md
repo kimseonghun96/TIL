@@ -5,11 +5,17 @@
 ```bash
 # 새로운 리액트 프로젝트 생성
 npx create-react-app 앱이름 --template typescript
+
+# 새로운 리액트-리덕스 프로젝트 생성
+npx create-react-app my-app --template redux-typescript
 ```
 
 ```bash
 # 기존에 존재하는 리액트 프로젝트에 타입스크립트 적용
 npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+
+# react-redux 설치
+npm install react-redux @reduxjs/toolkit
 ```
 
 `App.tsx`와 같이 `.tsx` 파일은 JSX 문법을 사용하는 타입스크립트 파일의 확장명이다.
@@ -432,4 +438,220 @@ const CreateTodo = function (props: Props) {
 }
 
 export default CreateTodo
+```
+
+## 5. React & Redux
+
+### index
+
+```tsx
+// src/index.tsx
+
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import { Provider } from 'react-redux'
+import store from './store/index'
+
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
+root.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
+```
+
+### store
+
+```ts
+// src/store/index.ts
+
+import { configureStore } from '@reduxjs/toolkit'
+import counterReducer from './counterSlice'
+
+const store = configureStore({
+  reducer: { counter: counterReducer }
+})
+
+export type RootState = ReturnType<typeof store.getState>
+
+export type AppDispatch = typeof store.dispatch
+
+export default store
+```
+
+### hooks
+
+```ts
+// src/store/hooks.ts
+
+import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux'
+import { RootState, AppDispatch } from './index'
+
+export const useAppDispatch: () => AppDispatch = useDispatch
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector
+```
+
+### slice
+
+```ts
+// src/store/counterSlice.ts
+
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+
+interface CounterState {
+  counter: number
+  showCounter: boolean
+}
+
+const initialState: CounterState = {
+  counter: 0,
+  showCounter: true,
+}
+
+const counterSlice = createSlice({
+  name: 'counterSlice',
+  initialState,
+  reducers: {
+    increment(state, action: PayloadAction<{ amount: number }>) {
+      state.counter = state.counter + action.payload.amount
+    },
+    toggleCounter(state) {
+      state.showCounter = !state.showCounter
+    },
+  }
+})
+
+export const counterActions = counterSlice.actions
+
+export default counterSlice.reducer
+```
+
+### component
+
+```tsx
+// src/components/Counter.tsx
+
+import { counterActions } from '../store/counterSlice'
+import { useAppDispatch, useAppSelector } from '../store/hooks'
+
+const Counter = function () {
+
+  const dispatch = useAppDispatch()
+  const counter = useAppSelector((state) => state.counter.counter)
+  const show = useAppSelector((state) => state.counter.showCounter)
+
+  const incrementHandler = () => {
+    dispatch(counterActions.increment({ amount: 5 }))
+  }
+
+  const toggleCounterHandler = () => {
+    dispatch(counterActions.toggleCounter())
+  }
+
+  return (
+    <div>
+      <>
+        {show && counter}
+      </>
+      <button onClick={incrementHandler}>Increment</button>
+      <button onClick={toggleCounterHandler}>Toggle Counter</button>
+    </div>
+  )
+}
+
+export default Counter
+```
+
+### thunk
+
+```ts
+// src/store/counterSlice.ts
+
+import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
+
+const asyncIncrementFetch = createAsyncThunk(
+  'counterSlice/asyncIncrementFetch',
+  async () => {
+    function asyncFunction () {
+      return new Promise(function (resolve) {
+        setTimeout(() => {
+          resolve(1)
+        }, 1000)
+      })
+    }
+    const response = await asyncFunction()
+    return response
+  }
+)
+
+interface CounterState {
+  status: string
+  counter: number
+}
+
+const initialState: CounterState = {
+  status: 'Welcome',
+  counter: 0,
+}
+
+const counterSlice = createSlice({
+  name: 'counterSlice',
+  initialState,
+  reducers: {
+    increment(state, action: PayloadAction<{ amount: number }>) {
+      state.counter = state.counter + action.payload.amount
+    },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(asyncIncrementFetch.pending, (state, action) => {
+      state.status = 'Loading'
+    })
+    builder.addCase(asyncIncrementFetch.fulfilled, (state, action)=> {
+      if (typeof action.payload === 'number') {
+        state.counter = state.counter + action.payload
+        state.status = 'complete'
+      } else {
+        state.status = 'fail'
+      }
+    })
+    builder.addCase(asyncIncrementFetch.rejected, (state, action) => {
+      state.status = 'fail'
+    })
+  }
+})
+
+export const counterActions = counterSlice.actions
+
+export default counterSlice.reducer
+
+export { asyncIncrementFetch }
+```
+
+```tsx
+// src/components/Counter.tsx
+
+import { asyncIncrementFetch, counterActions } from '../store/counterSlice'
+import { useAppDispatch, useAppSelector } from '../store/hooks'
+
+const Counter = function () {
+
+  const dispatch = useAppDispatch()
+  const counter = useAppSelector((state) => state.counter.counter)
+  const status = useAppSelector((state) => state.counter.status)
+
+  return (
+    <div>
+      { counter } | { status }
+      {/* 동기적 */}
+      <button onClick={() => dispatch(counterActions.increment({amount: 5}))}>Increment</button>
+      {/* 비동기적 */}
+      <button onClick={() => dispatch(asyncIncrementFetch())}>Async Increment</button>
+    </div>
+  )
+}
+
+export default Counter
 ```
