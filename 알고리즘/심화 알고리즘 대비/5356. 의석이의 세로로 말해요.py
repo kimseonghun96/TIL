@@ -62,10 +62,10 @@ for tc in range(1, T+1):
     #세로로 읽을 정답 저장
     answer = ''
 
-    #리스트를 세로로 읽으면서, ' '를 제외한 나머지를 저장
+    #리스트를 세로로 읽으면서, ' '를 제외한 나머지를 저장한다.
     for r in range(max_len):
         for c in range(5):
             if arr[c][r] != ' ':
                 answer += arr[c][r]
-
+    # print(answer)
     print(f'#{tc} {answer}')
