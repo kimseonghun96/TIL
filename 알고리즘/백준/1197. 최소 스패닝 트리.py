@@ -30,3 +30,7 @@ for a, b, w in edges:
         answer += w
 
 print(answer)
+
+
+# 노드 간선에 대한 문제
+# 트리에 대해서 잘 알아 보자 
