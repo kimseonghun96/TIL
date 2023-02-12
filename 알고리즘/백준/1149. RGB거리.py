@@ -14,3 +14,4 @@ for i in range(1, N):
 # print(house) = [[26, 40, 83], [89, 86, 83], [96, 172, 185]]
 print(min(house[-1]))
 print(house)
+print(N)
