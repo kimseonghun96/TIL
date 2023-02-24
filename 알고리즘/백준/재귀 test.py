@@ -1,9 +1,9 @@
-# def a(n):
-#     if n <= 1:
-#         return 1
-#     return n * a(n-1)
-#
-# print(a(5))
+def a(n):
+    if n <= 1:
+        return 1
+    return n * a(n-1)
+
+print(a(5))
 
 def gcd(a, b):
     if a % b == 0:
