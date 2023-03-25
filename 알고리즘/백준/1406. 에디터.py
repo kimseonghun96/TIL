@@ -1,22 +1,19 @@
-string_list = list(input())
-cursor = len(string_list)
+import sys
 
-for _ in range(int(input())):
-    command = list(input().split())
-    if command[0] == 'P':
-        string_list.insert(cursor, command[1])
-        cursor += 1
+stack_l = list(input())
+stack_r = []
+n = int(input())
 
-    elif command[0] == 'L':
-        if cursor > 0:
-            cursor -= 1
+for i in range(n):
+    command = sys.stdin.readline().split()
 
-    elif command[0] == 'D':
-        if cursor < len(string_list):
-            cursor += 1
+    if command[0] == "L" and stack_l:
+        stack_r.append(stack_l.pop())
+    elif command[0] == "D" and stack_r:
+        stack_l.append(stack_r.pop())
+    elif command[0] == "B" and stack_l:
+        stack_l.pop()
+    elif command[0] == "P":
+        stack_l.append(command[1])
 
-    else:
-        if cursor > 0:
-            string_list.remove(string_list[cursor - 1])
-
-print(''.join(string_list))
+print("".join(stack_l + list(reversed(stack_r))))
