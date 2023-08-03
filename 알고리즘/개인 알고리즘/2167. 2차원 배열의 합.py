@@ -24,6 +24,24 @@ for _ in range(K):
 
     print(total_sum)
 
+###다른 방식
+import sys
+input = sys.stdin.readline
+
+N, M = map(int, input().split())
+arr = [list(map(int, input().split())) for _ in range(N)]
+K = int(input())
+
+for _ in range(K):
+    ans = 0
+    i, j, x, y = map(int, input().split())
+    for t in range(i-1, x):
+        for v in range(j-1, y):
+            ans += arr[t][v]
+
+    print(ans)
+
+
 
 
 

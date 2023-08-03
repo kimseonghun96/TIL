@@ -1,8 +1,15 @@
 import sys
 input = sys.stdin.readline
 
-N, M = map(int, input().split())
+n = int(input())
+arr = list(map(int, input().split()))
+m = int(input())
 
-arr = [list(map(int, input().split())) for _ in range(N)]
+start, end = 1, max(arr)
 
-print(arr)
+while start <= end:
+    mid = (start + end) // 2
+    for i in arr:
+
+
+
