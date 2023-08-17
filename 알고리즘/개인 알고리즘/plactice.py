@@ -1,15 +1,16 @@
-import sys
-input = sys.stdin.readline
+def solution(X, Y):
+    answer = []
+    for i in (set(X)&set(Y)) :
+        for j in range(min(X.count(i), Y.count(i))) :
+            answer.append(i)
+    answer.sort(reverse=True)
+    if len(answer) == 0:
+        return "-1"
+    if answer[0] == "0":
+        return "0"
+    answer = "".join(answer)
+    return answer
 
-n = int(input())
-arr = list(map(int, input().split()))
-m = int(input())
+X, Y = '100', '203045'
 
-start, end = 1, max(arr)
-
-while start <= end:
-    mid = (start + end) // 2
-    for i in arr:
-
-
-
+print(solution(X, Y))
