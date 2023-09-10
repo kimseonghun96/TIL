@@ -27,11 +27,12 @@ npm install react-redux @reduxjs/toolkit
 ### 컴포넌트 생성 및 props 전달
 
 - 컴포넌트 적용 및 props 전달
+  
   ```tsx
   // src/App.tsx
-
+  
   import Todos from './components/Todos'
-
+  
   function App() {
     return (
       <div>
@@ -39,14 +40,14 @@ npm install react-redux @reduxjs/toolkit
       </div>
     );
   }
-
+  
   export default App;
   ```
 
 - 컴포넌트 생성
-
+  
   기존에 리액트에서 사용하던 방식으로 컴포넌트를 생성하면 props의 타입을 명시하지 않아 에러가 발생한다.
-
+  
   ```tsx
   // props의 타입을 지정하지 않아 에러 발생
   const Todos = function (props) {
@@ -60,84 +61,84 @@ npm install react-redux @reduxjs/toolkit
       </ul>
     )
   }
-
+  
   export default Todos
   ```
-
+  
   따라서 다음과 같은 다양한 방법으로 컴포넌트를 생성할 수 있다.
-
+  
   - `FC` 사용
-
+    
     `FC`(=FunctionComponent)는 제네릭 타입으로, props로 넘겨 받는 인자의 타입을 지정해주어야 한다.
-
+    
     ```tsx
     // src/components/Todos.tsx
-
+    
     import { FC } from 'react'
-
+    
     // props 내 인자(items)의 타입을 명시
     const Todos: FC<{ items: string[] }> = function (props) {
       return (
         // 생략
       )
     }
-
+    
     export default Todos
     ```
-
+    
     하지만 `FC`의 사용을 지양해야 한다는 의견이 있는데, 그 중 하나는 불필요한 코드가 발생한다는 것이다.
-
+    
     또, 함수 선언식에서 사용이 불가하다는 점이 있다.
-
+    
     ```tsx
     // 함수 선언식에서 사용 불가
     function Todos (props) {
       // 생략
     }
     ```
-
+    
     (`children`을 사용하지 않는 컴포넌트에서도 항상 props가 `children`을 가지는 문제도 있었지만, 지금은 `children`이 소스 코드에서 빠진 듯 하다.)
-
+    
     이를 해결하기 위해 사용하는 방법이 **props interface를 직접 생성하는 것이다.**
-
+  
   - props interface 이용
-
+    
     ```tsx
     // src/components/Todos.tsx
-
+    
     // Props interface 생성
     interface Props {
       items: string[]
     }
-
+    
     // props의 타입 설정
     const Todos = function (props: Props) {
       return (
         // 생략
       )
     }
-
+    
     export default Todos
     ```
-
+    
     이같은 방식은 props 타입을 따로 생성해 관리하기 때문에 가독성 측면에서 효과적이다.
-
+    
     또한 props의 타입을 직접 지정하기 때문에 함수 선언식에서도 사용 가능하다.
-
+  
   - `PropsWithChildren` 사용
-
+    
     `children`을 사용하는 컴포넌트인 경우 `PropsWithChildren`을 이용해 간편하게 타입을 지정할 수 있다.
-
+    
     ```tsx
     // src/components/Todos.tsx
-
+    
     import { PropsWithChildren } from 'react'
-
+    
     // props로 넘어오는 인자의 타입만 명시한다.
     interface Props {
       items: string[]
     }
-
+    
     // PropsWithChildren 사용
     // props.children 으로 children 속성에 접근 가능
     function Todos(props: PropsWithChildren<Props>) {
@@ -145,43 +146,43 @@ npm install react-redux @reduxjs/toolkit
         // 생략
       )
     }
-
+    
     export default Todos
     ```
-
+    
     또는 `PropsWithChildren` 대신 props 타입에 `children`의 타입을 `ReactNode`로 직접 지정해도 무방하다.
-
+    
     ```tsx
     // src/components/Todos.tsx
-
+    
     import { ReactNode } from 'react'
-
+    
     interface Props {
       items: string[]
       children: ReactNode
     }
-
+    
     // props 내에 children 속성이 존재
     const Todos = function (props: Props) {
       return (
         // 생략
       )
     }
-
+    
     export default Todos
     ```
 
 ### 다양한 props 전달하기
 
 - 객체로 이루어진 배열 전달
-
+  
   ```tsx
   // src/App.tsx
-
+  
   import Todos from './components/Todos'
-
+  
   function App() {
-
+  
     // 단순 문자열에서 객체로 변경
     const todos = [
       {
@@ -193,30 +194,30 @@ npm install react-redux @reduxjs/toolkit
         text: 'Learn TypeScript'
       }
     ]
-
+  
     return (
       <div>
         <Todos items={todos} />
       </div>
     );
   }
-
+  
   export default App;
   ```
-
+  
   ```tsx
   // src/components/Todos.tsx
-
+  
   interface Props {
     items: Todo[] // items의 타입을 Todo로 된 배열로 설정
   }
-
+  
   // Todo interface 생성
   interface Todo {
     id: number
     text: string
   }
-
+  
   const Todos = function (props: Props) {
     return (
       <ul>
@@ -228,13 +229,15 @@ npm install react-redux @reduxjs/toolkit
       </ul>
     )
   }
-
+  
   export default Todos
   ```
 
 - 이벤트 전달
-```tsx
-// src/components/CreateTodo.tsx
+  
+  ```tsx
+  // src/components/CreateTodo.tsx
+  ```
 
 interface Props {
   // 문자열의 text를 받아 Todo 생성
@@ -256,8 +259,8 @@ const CreateTodo = function (props: Props) {
 }
 
 export default CreateTodo
-```
 
+```
 ```tsx
 // src/App.tsx
 
@@ -328,19 +331,19 @@ export default CreateTodo
 ### 이벤트 종류
 
 - `FormEvent`
-
+  
   Form이 submit될 때 마다 작동한다. (`onSubmit`과 함께 사용)
 
 - `ChangeEvent`
-
+  
   `input`, `select`, `textarea` 요소가 변할 때마다 작동한다. (`onChange`와 함께 사용)
 
 - `MouseEvent`
-
+  
   마우스를 클릭할 때마다 작동한다. (`onClick`과 함께 사용)
 
 - `FocusEvent`
-
+  
   focus를 얻거나 잃었을 때 작동한다. (`onFocus` 또는 `onBlur`와 함께 사용)
 
 - [더 다양한 이벤트 보기](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/forms_and_events)
