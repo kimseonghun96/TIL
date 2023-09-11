@@ -19,7 +19,6 @@ for y in range(R):
             for i in range(4):
                 ny = y + dy[i]
                 nx = x + dx[i]
-
                 if 0 <= ny < R and 0 <= nx < C:
                     if arr[ny][nx] == '.':
                         count += 1
