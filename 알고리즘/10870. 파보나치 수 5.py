@@ -10,3 +10,5 @@ while num:
 
 print(ans[n])
 
+## 파보나치
+
