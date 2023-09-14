@@ -1,3 +1,5 @@
+# ::-1은 뒤집는 거
+
 X, Y = map(int, input().split())
 
 def Rev_a(X):
