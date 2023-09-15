@@ -1,3 +1,5 @@
+# pass는 종료
+
 computer = int(input())
 
 n = int(input())
