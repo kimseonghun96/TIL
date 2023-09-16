@@ -1,11 +1,3 @@
-'''
-ABCDE
-abcde
-01234
-FGHIJ
-fghij
-'''
-
 import sys
 
 input = sys.stdin.readline
