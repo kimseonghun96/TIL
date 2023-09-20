@@ -1,15 +1,19 @@
 import sys
+
 input = sys.stdin.readline
-n, m = map(int, input().split())  # 도감에 수록된 수, 문제 수
-pokemons = dict()
-pokemons_num = dict()
-for i in range(1, n + 1):
-    pokemon = input().strip()
-    pokemons[i] = pokemon
-    pokemons_num[pokemon] = i
-for _ in range(m):
-    target = input().strip()
-    if target.isdigit():
-        print(pokemons[int(target)])
+n, m = map(int, input().split())
+
+poket = dict()
+poket_num = dict()
+
+for i in range(1, n+1):
+    poketmon = input().strip()
+    poket[poketmon] = i
+    poket_num[i] = poketmon
+
+for i in range(m):
+    question = input().strip()
+    if question.isdigit():
+        print(poket_num[int(question)])
     else:
-        print(pokemons_num[target])
+        print(poket[question])
