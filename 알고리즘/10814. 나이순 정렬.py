@@ -1,3 +1,5 @@
+# 나이 체크
+
 N = int(input())
 
 people = []
