@@ -1,3 +1,5 @@
+#  # heapq를 활용하지만 이 함수는 min heap만을 지원한다. 그래서 음수로 만들어서 리스트에 넣음
+
 import sys
 import heapq
 
@@ -16,4 +18,4 @@ for _ in range(n):
         else:
             print(-1 * heapq.heappop(heap))  # 양수로 뽑으려고, heapq.heappop(heap)는 가장 작은 걸 리턴
     else:
-        heapq.heappush(heap, (-X))   # heapq를 활용하지만 이 함수는 min heap만을 지원한다. 그래서 음수로 만들어서 리스트에 넣음
+        heapq.heappush(heap, (-X))
