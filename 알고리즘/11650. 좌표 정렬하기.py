@@ -1,3 +1,6 @@
+# 인덱스 비교
+
+
 N = int(input())
 
 people = []
