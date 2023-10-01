@@ -1,3 +1,5 @@
+# 구간합을 알고리즘 많이 나옴..
+
 import sys
 
 N, M = map(int, sys.stdin.readline().split())
