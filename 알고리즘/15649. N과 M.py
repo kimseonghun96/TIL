@@ -1,3 +1,5 @@
+# 가장 기본적인 dfs
+
 import sys
 
 input = sys.stdin.readline
