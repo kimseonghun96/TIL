@@ -1,3 +1,5 @@
+# 배열을 잘 파악하자
+
 T = int(input())
 for tc in range(1, T + 1):
     N = int(input())
