@@ -1,3 +1,5 @@
+# 2차원 배열 받는 법
+
 import sys
 read = sys.stdin.readline
 
