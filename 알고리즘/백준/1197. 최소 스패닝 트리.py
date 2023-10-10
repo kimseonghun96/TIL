@@ -1,3 +1,5 @@
+# 노드 간선이 너무 어렵다
+
 def find_set(x):
     if parent[x] != x:
         parent[x] = find_set(parent[x])
