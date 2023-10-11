@@ -1,3 +1,6 @@
+# 쉽긴해
+
+
 arr = []
 
 for i in range(1, 46):
