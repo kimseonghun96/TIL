@@ -1,3 +1,5 @@
+# 어렵다..
+
 import sys
 
 x = sys.stdin.readline()
