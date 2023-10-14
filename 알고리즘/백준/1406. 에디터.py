@@ -1,3 +1,5 @@
+# pop은 뒤에거 제거
+
 import sys
 
 stack_l = list(input())
