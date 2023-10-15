@@ -1,3 +1,5 @@
+# 반복문을 따라 체크
+
 import sys
 
 n, c, w = map(int, sys.stdin.readline().split())
