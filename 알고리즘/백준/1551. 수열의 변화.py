@@ -1,3 +1,5 @@
+# 1부터하면 됨
+
 n, k = map(int, input().split())
 arr = list(map(int, input().split(',')))
 
