@@ -1,3 +1,5 @@
+# 이진탐색으로 미들 값 계속 비교해주면서 하면된다
+
 k, n = map(int, input().split())
 lanlist = []
 for _ in range(k):
