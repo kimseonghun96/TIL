@@ -1,4 +1,5 @@
 # 특정 숫자 x가 소수인지 판별하는 가장 기본적인 알고리즘
+# 인덱스를 활용하는겨
 
 def primenum(x):
     for i in range(2, x):
