@@ -1,6 +1,5 @@
-# BOJ. 2096. 내려가기
-# 설계 의도: 이게 왜 골드? DP라고 하기에도 부끄러운 문제임다..
-# 개선점: 문제를 더 어렵게 개선해주시죠...
+
+
 import sys
 import copy
 input = sys.stdin.readline
