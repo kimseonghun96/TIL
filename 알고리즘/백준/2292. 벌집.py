@@ -1,3 +1,5 @@
+# 반목문 쓰자이
+
 n = int(input())
 
 nums_pileup = 1  # 벌집의 개수, 1개부터 시작
