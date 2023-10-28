@@ -1,3 +1,5 @@
+# 그냥 개수만 파악하면 된당
+
 A = int(input())
 B = int(input())
 C = int(input())
