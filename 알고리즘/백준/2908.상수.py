@@ -1,3 +1,5 @@
+# 정상수
+
 a, b = input().split()
 
 a_num = int(a[::-1])
