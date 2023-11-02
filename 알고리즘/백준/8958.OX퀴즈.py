@@ -1,7 +1,7 @@
 T = int(input())
 for tc in range(1, T+1):
     result = list(input())
-    # print(result)
+
     answer = 0
     cnt = 0
     for i in result:
