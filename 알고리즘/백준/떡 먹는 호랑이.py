@@ -1,8 +1,7 @@
 #피보나치 수열
 d, k = map(int, input().split())
 
-#fibo(d-1)*a + fibo(d)*b
-#K = ax + by
+
 
 x = 1
 y = 0
