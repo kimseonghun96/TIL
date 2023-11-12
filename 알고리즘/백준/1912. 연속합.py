@@ -14,4 +14,3 @@ for i in range(1, N):
     #그 전 dp 값(연속된 값)에 arr[i]를 더한 값이다.(둘 중 더 큰 값)(0이나 더 큰 값)
 #
 print(max(dp))
-# print(dp)
