@@ -1,4 +1,4 @@
-# 평균 구하기 쉽자너~
+# 평균 구하기 쉽자너
 
 N = int(input())
 record = list(map(int, input().split()))
