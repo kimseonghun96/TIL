@@ -8,5 +8,5 @@ while True:
             cnt += 1
     if cnt >= 3:
         print(minNum)
-        break
+        break   
     minNum += 1
