@@ -1,3 +1,6 @@
+# 가장 기본적인 이진탐색
+
+
 n, m = map(int, input().split())
 
 trees = list(map(int, input().split()))
@@ -20,3 +23,4 @@ def serch(m, trees):
 
 
 print(serch(m, trees))
+
