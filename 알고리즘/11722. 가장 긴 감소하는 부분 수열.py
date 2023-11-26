@@ -1,3 +1,5 @@
+# dp의 기본입네다
+
 n = int(input())
 
 arr = list(map(int,input().split()))
