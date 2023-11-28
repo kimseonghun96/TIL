@@ -3,21 +3,6 @@
 # 왼쪽부터 모든 'XXXX'를 'AAAA'로 치환하고, 바뀐 문자열에서 남은 'XX'를 모두 'BB'로 치환
 # 문자열 체크
 
-# import sys
-#
-# input = sys.stdin.readline
-#
-# borad = input()
-#
-# borad = borad.replace("XXXX", "AAAA")
-# borad = borad.replace("XX", "BB")
-#
-# if "X" in borad:
-#     print(-1)
-# else:
-#     print(borad)
-#
-
 
 
 import sys
