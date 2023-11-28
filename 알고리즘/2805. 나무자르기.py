@@ -1,4 +1,4 @@
-# 가장 기본적인 이진탐색
+#  이진탐색
 
 
 n, m = map(int, input().split())
