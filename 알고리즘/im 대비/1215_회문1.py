@@ -5,9 +5,8 @@ T = 10
 for tc in range(1, T+1):
     N = int(input())
     arr = [list(map(str, input())) for _ in range(8)]
-    # print(arr)
     zip_arr = list(zip(*arr))
-    # print(zip_arr)
+
 
     answer = 0
     for r in range(8):
