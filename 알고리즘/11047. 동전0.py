@@ -11,6 +11,7 @@ for i in range(n):
     num = int(input())
     arr.append(num)
 
+# coins.sort(reverse=True) 뒤집는 거
 for i in arr[::-1]:
     if k >= i:
         ans += k // i
