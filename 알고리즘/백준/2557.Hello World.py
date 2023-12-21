@@ -1,3 +1,0 @@
-##ㅋㅋㅋㅋㅋ
-
-print('Hello World!')

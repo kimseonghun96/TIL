@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4e4633cd-9956-48ec-9828-7a692228b514" name="디폴트 변경 목록" comment="">
+      <change beforePath="$PROJECT_DIR$/../1010. 다리 놓기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10430. 나머지.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../107973 10부제.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10798. 새로읽기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10814. 나이순 정렬.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10828. 스택.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10870. 파보나치 수 5.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10886. cute.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11022. A+B-8.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11044. K번째 수.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11047. 동전0.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11279. 최대 힙.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11399. ATM.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1145. 적어도 대부분의 배수.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11557. Yangjojang of The Year.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11650. 좌표 정렬하기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11654. 아스키 코드.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11659. 구간 합 구하기 4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11722. 가장 긴 감소하는 부분 수열.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11728. 배열합치기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1212. 8진수 2진수.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1234. 성지키기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1260.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1343. 폴리오미노.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1357. 뒤집힌 덧셈.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1371. 가장 많은 글자.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14425. 문자열 집합.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14696..py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14916. 거스름돈.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1547. 공.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../15649. N과 M.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1568. 새.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../15721. 번데기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1789. 수들의 합.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1834. 나머지와 몫이 같은 수.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../18352. 특정 거리의 도시 찾기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2012. 등수매기기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20438. 출석체크.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20922. 겹치는 건 싫어.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2417. 정수 제곱근.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2420. 사파리 월드.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2606.  바이러스.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2693. N번째 큰 수.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2743. 단어길이재기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2789. 블랙잭.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2805. 나무자르기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2810. 컵홀더.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2846. 오르막길.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2851. 슈퍼마리오.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2974. skanwhrkr.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2진수 8진수.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5215. 지구온난화.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5543. 상근날드.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../7287. 등록.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../7568. 덩치.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../개인 알고리즘/11660. 구간 합 구하기 5.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1001.A-B.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1003. 피보나치 함수.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1008.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1009. 분산처리.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10171.고양이.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10172.개.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1018.체스판 다시 칠하기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1020. 나는야 포켓몬 마스터 이다솜.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1024. 수열의 합.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10250. ACM 호텔.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1037. 약수.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10809.알파벳찾기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10818.최소, 최대.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1085. 직사각형에서 탈출.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1085. 친구.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10869.사칙연산.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10951.A+B - 4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10989.수 정렬하기3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10998.AxB.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1110. 더하기 사이클.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1141. 접두사.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1145. 적어도 대부분의 배수.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1149. RGB거리.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1152.단어의 개수.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1157.단어공부.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/11720.숫자의 합.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1181. 단어정렬.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1182. 부분수열의 합ㅂ.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1197. 최소 스패닝 트리.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/12865. 평범한 배낭.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1292. 쉽게 푸는 문제.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1326. 폴짝폴짝.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1330.두 수 비교하기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1357. 뒤집힌 덧셈.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1373. 2진수 8진수.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1406. 에디터.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1421. 나무꾼 이다솜.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1436. 영화감독 숌.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1463. 1로 만들기.py" beforeDir="false" afterPath="$PROJECT_DIR$/1463. 1로 만들기.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1546.평균.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1551. 수열의 변화.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/15649. N과 M (1).py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1654. 랜선자르기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1834. 나머지와 몫이 같은 수.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1912. 연속합.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1920. 수 찾기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1978. 소수 찾기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2096. 내려가기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2108. 통계학.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2156. 포도주 시식.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2164. 카드2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2231. 분해합.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2292. 벌집.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2439.별 찍기 - 2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2475검증수.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2503. 숫자야구.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2557.Hello World.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2562.최댓값.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2577.숫자의 개수.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2606. 바이러스.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2609. 최대공약수와 최소공배수.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2675. 문자열반복.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2741.N 찍기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2747. 파보나치 수.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2753.윤년.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2775. 부녀회장이 될테야.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2869. 달팽이는 올라가고 싶다.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2884.알람 시계.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2908.상수.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2920.음계.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3052.나머지.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/5639. 이진검색트리.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8958.OX퀴즈.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9012. 괄호.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9095. 1, 2, 3 더하기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9498.시험 성적.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATM.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/function test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/거스름돈.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/구현.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/그리디.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/떡 먹는 호랑이.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/재귀 test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/체스판.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/.idea/심화 알고리즘 대비.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/03_배열1_3 분할.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/03_배열2_농작물 수확.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/0915heap.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/0915트리.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/1210.Ladder1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/1231.중위순회.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/14178. 1차원 정원.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/1486. 장훈이의 높은 선반.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/1859.백만장자프로젝트.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/4408. 자기 방으로 돌아가기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/4875.미로.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/5174.subtree.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/5356. 의석이의 세로로 말해요.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/5688. 세제곱근을 찾아라.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/Algo1_대전_3반_김성훈.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/DFS &amp; BFS.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/alfh.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/babyjin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/test2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/tree1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/tree2 연습.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/tree2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/view.1206.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/ㅇㅇㅇ.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/김성훈 계획표.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/노드의 합.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/농작물.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/단순 2진 코드.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/러시아 국기;.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/로봇청소기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/미로1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/미로2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/미로만들기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/백준2667.단지 번호 붙이기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/봉우리.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/부분 집합의 합.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/사칙연산.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/상근이의 여행.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/상호의 배틀필드.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/새샘이의 7-3-5 게임.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/알파벳 공부.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/양.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/양bfs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/양양양.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/연습문제 1 - 순회.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/오목 판정.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/오목판정.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/오셀로.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/완전 이진트리.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/이진탐색.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/이진힙.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/자기 방.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/정사각형 방.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/정사각형 판정.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/줄 세우기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/진기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/최대힙.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/최소힙.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/파리퇴칠.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../심화 알고리즘 대비/폭격작전.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../코리스터디/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../코리스터디/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../코리스터디/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../코리스터디/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../코리스터디/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../코리스터디/.idea/코리스터디.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../코리스터디/1016.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../코리스터디/1026.보물.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../코리스터디/10804. 문자열의 거울상.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../코리스터디/12368. 24시간.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../코리스터디/13547. 팔씨름.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../코리스터디/1928. Base64 Decode.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../코리스터디/1966.프린터 큐.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../코리스터디/2005.파스칼의 삼각형.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../코리스터디/2805.나무 자르기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../코리스터디/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../코리스터디/로봇청소기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../코리스터디/백준 14555. 공과 잡초.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../코리스터디/백준.2798.블랙잭.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../코리스터디/백준1026.보물.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2c2fKqBP32zk91usz1DgKNu79Wt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="1463. 1로 만들기" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="백준" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1463. 1로 만들기.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.1463. 1로 만들기" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="4e4633cd-9956-48ec-9828-7a692228b514" name="디폴트 변경 목록" comment="" />
+      <created>1707314533748</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707314533748</updated>
+    </task>
+    <servers />
+  </component>
+</project>

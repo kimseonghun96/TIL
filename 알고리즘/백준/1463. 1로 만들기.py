@@ -1,16 +1,18 @@
-# 나누기하면 간단해
+import sys
+input = sys.stdin.readline
 
-n = 10
+N = int(input())
+dp = [0] * (N+1)
 
-arr = [2, 3]
-result = 0
-ans = 0
+#바텀업 방식
+for i in range(2, N+1):
+    dp[i] = dp[i-1] + 1
+    # i값이 2, 3으로 나누어지지 않아서 1로 빼야하는 값
+    if i % 2 == 0:
+        dp[i] = min(dp[i], dp[i//2]+1)
+    #i값이 2로 나누어 떨어지면,
+    #위에서 1을 뺀 값이랑, 2로 나눠준 값에서 1을 더한 값 중에 작은 값을 택한다.
+    if i % 3 == 0:
+        dp[i] = min(dp[i], dp[i//3]+1)
 
-while True:
-    for num in arr:
-        result += n % num
-        ans += 1
-    if result == 0:
-        break
-
-print(ans)
+print(dp[N])
